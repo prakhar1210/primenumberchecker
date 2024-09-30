@@ -1,3 +1,42 @@
+Prime Number Checker with React and Memoization
+This simple React app allows users to check whether a number is prime or not, utilizing memoization to optimize performance.
+
+Features:
+
+Input Field: Users can enter any number.
+
+Prime Check: The app checks if the entered number is prime using a basic algorithm.
+
+Memoization: The result is memoized using the useMemo hook, ensuring that the prime-check function is only recalculated when the number changes. This avoids unnecessary recalculations and improves performance, especially for expensive operations.
+
+Key Technologies:
+
+React.js: For building the user interface and managing the component state.
+
+useMemo: React hook used to memoize the result of the prime-checking function to prevent unnecessary re-execution.
+
+CSS: Basic styles for centering and enhancing the input field and result display.
+
+How it works:
+The user enters a number in the input field.
+The app checks if the number is prime using a function that iterates up to the square root of the number.
+The result (prime or not) is displayed below the input field.
+
+Code snippet:
+const isPrime = (num) => {
+if (num < 2) return false;
+for (let i = 2; i <= Math.sqrt(num); i++) {
+if (num % i === 0) return false;
+}
+return true;
+};
+
+Usage:
+Clone the repository.
+Install dependencies with npm install.
+Run the app with npm start.
+Enter a number and see whether it’s prime or not!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
